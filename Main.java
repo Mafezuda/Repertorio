@@ -1,5 +1,5 @@
-public class main {
-    public static void main(String[] args) {
+public class Main {
+    public static void Main(String[] args) {
         StaticStack<Integer> pilha = new StaticStack<>(5);
 
         System.out.println("Empilhando elementos na pilha:");
