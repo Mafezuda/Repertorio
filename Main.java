@@ -1,5 +1,5 @@
 public class Main {
-    public static void Main(String[] args) {
+    public static void main(String[] args) {
         StaticStack<Integer> pilha = new StaticStack<>(5);
 
         System.out.println("Empilhando elementos na pilha:");
@@ -36,6 +36,44 @@ public class Main {
             System.out.println("A pilha está vazia.");
         } else {
             System.out.println("A pilha não está vazia.");
+        }
+
+        Fila<Integer> fila = new Fila<>(5);
+
+        System.out.println("\nAdicionando elementos na fila:");
+        fila.add(10);
+        fila.add(20);
+        fila.add(30);
+        fila.add(40);
+        fila.add(50);
+
+        try {
+            fila.add(60);
+        } catch (RuntimeException e) {
+            System.out.println("Erro: " + e.getMessage());
+        }
+
+        System.out.println("Removendo elementos da fila:");
+        while (!fila.isEmpty()) {
+            System.out.println("Elemento removido: " + fila.remove());
+        }
+
+        try {
+            fila.remove();
+        } catch (RuntimeException e) {
+            System.out.println("Erro: " + e.getMessage());
+        }
+
+        System.out.println("Adicionando novamente elementos na fila:");
+        fila.add(100);
+        fila.add(200);
+        System.out.println("Limpando a fila.");
+        fila.clear();
+
+        if (fila.isEmpty()) {
+            System.out.println("A fila está vazia.");
+        } else {
+            System.out.println("A fila não está vazia.");
         }
     }
 }
