@@ -69,7 +69,6 @@ public class Main {
         fila.add(200);
         System.out.println("Limpando a fila.");
         fila.clear();
-
         if (fila.isEmpty()) {
             System.out.println("A fila está vazia.");
         } else {
