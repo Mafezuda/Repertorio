@@ -74,5 +74,35 @@ public class Main {
         } else {
             System.out.println("A fila não está vazia.");
         }
+
+        StaticLista<Integer> lista = new StaticLista<>(5);
+
+        System.out.println("\nAdicionando elementos na lista:");
+        lista.add(10);
+        lista.add(20);
+        lista.add(30);
+        lista.add(40);
+        lista.add(50);
+
+        System.out.println("Tentando adicionar um elemento extra:");
+        try {
+            lista.add(60);
+        } catch (RuntimeException e) {
+            System.out.println("Erro: " + e.getMessage());
+        }
+
+        System.out.println("Removendo elemento da posição 2:");
+        lista.remove(2);
+
+        System.out.println("Elemento na posição 2: " + lista.getData(2));
+
+        System.out.println("Limpando a lista.");
+        lista.clear();
+
+        if (lista.isEmpty()) {
+            System.out.println("A lista está vazia.");
+        } else {
+            System.out.println("A lista não está vazia.");
+        }
     }
 }
