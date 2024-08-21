@@ -1,1 +1,3 @@
-public class StaticList <T> 
+public class StaticLista <T> {
+
+}
